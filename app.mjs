@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes.mjs';
 import cookieParser from 'cookie-parser';
 import {requireAuth,checkUser} from './middleware/authMiddleware.mjs';
-const port = process.env.PORT;
+
 const app = express();
 
 // middleware
