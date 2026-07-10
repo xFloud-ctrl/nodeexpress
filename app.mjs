@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // view engine
 app.set('view engine', 'ejs');
-const port = process.env.PORT || 3001;
+
 // database connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => console.log('Connected to MongoDB'))
