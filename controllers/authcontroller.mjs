@@ -1,4 +1,4 @@
-import User from '../models/User.mjs';
+import User from '../models/шser.mjs';
 import jwt from 'jsonwebtoken';
 
 const maxAge = 3 * 24 * 60 * 60;
