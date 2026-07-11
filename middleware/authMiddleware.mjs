@@ -4,7 +4,7 @@ import User from '../models/user.mjs';
 export const requireAuth = (req, res, next) => {
     const token = req.cookies.jwt;
     if (token) {
-        jwt.verify(token, 'process.env.JWT_SECRET', (err, decodedToken) => {
+        jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
             if (err) { 
             console.log(err.message);   
                 res.redirect('/login');
@@ -22,7 +22,7 @@ export const checkUser = (req, res, next) => {
     const token = req.cookies.jwt;
 
     if(token){
-        jwt.verify(token, 'process.env.JWT_SECRET', async (err, decodedToken) => {
+        jwt.verify(token, process.env.JWT_SECRET, async (err, decodedToken) => {
             if (err) {
                 res.locals.user = null;
                 next();
